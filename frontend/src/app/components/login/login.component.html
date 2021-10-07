@@ -5,13 +5,13 @@
         <mat-card-title fxLayout="row" fxLayoutAlign="center">Login</mat-card-title>
         <mat-form-field appearance="standard">
           <mat-label>E-mail</mat-label>
-          <input matInput placeholder="abc@xyz.com" type="email" required formControlName="email">
+          <input matInput placeholder="abc@xyz.com" type="email" required formControlName="email" id="email">
         </mat-form-field>
         <mat-form-field appearance="standard">
           <mat-label>Password</mat-label>
-          <input matInput type="password" required formControlName="password">
+          <input matInput type="password" required formControlName="password" id="password">
         </mat-form-field>
-        <button mat-flat-button class="but" type="submit" (click)="getUser(login, loginFormDirective)">Submit</button>
+        <button mat-flat-button class="but" type="submit" (click)="getUser(login, loginFormDirective)" id="submit">Submit</button>
         <hr>
         <a routerLink="/register"><button mat-flat-button class="but">Register</button></a>
       </div>
