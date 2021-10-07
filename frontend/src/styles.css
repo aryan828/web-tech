@@ -1,6 +1,8 @@
 body {
   background-image: url("./assets/back.jpg");
   background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
 }
 /* You can add global styles to this file, and also import other style files */
 
