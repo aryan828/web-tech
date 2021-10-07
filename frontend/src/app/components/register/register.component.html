@@ -1,0 +1,98 @@
+<div id="main" fxLayout="row" fxLayoutGap="30px">
+  <div fxLayout="column" fxLayoutGap="10px" fxFlex="10">
+    <button mat-raised-button class="mat-elevation-z24" (click)="selected = 1" [style.background-color]="selected == 1? 'rgba(44,48,111,255)' : 'rgb(246,250,248)'" [style.color] = "selected == 1? 'white' : 'black'">Profile</button>
+    <button mat-raised-button class="mat-elevation-z24" (click)="selected = 2" [style.background-color]="selected == 2? 'rgba(44,48,111,255)' : 'rgb(246,250,248)'" [style.color] = "selected == 2? 'white' : 'black'">Contact</button>
+    <button mat-raised-button class="mat-elevation-z24" (click)="selected = 3" [style.background-color]="selected == 3? 'rgba(44,48,111,255)' : 'rgb(246,250,248)'" [style.color] = "selected == 3? 'white' : 'black'">Additional</button>
+  </div>
+  <div fxLayout="column" fxFlex="40">
+    <mat-card class="mat-elevation-z24" *ngIf="selected === 1" [formGroup]="profile">
+      <mat-card-title fxLayout="row" fxLayoutAlign="center">PROFILE</mat-card-title>
+      <mat-divider></mat-divider>
+      <br>
+      <h2>Name</h2>
+      <mat-form-field appearance="standard">
+        <mat-label>Name</mat-label>
+        <input matInput formControlName="name" required>
+      </mat-form-field>
+
+      <h2>E-mail</h2>
+      <mat-form-field appearance="standard">
+        <mat-label>E-mail</mat-label>
+        <input matInput type="email" formControlName="email" required>
+      </mat-form-field><br>
+
+      <h2>Password</h2>
+      <div fxLayout="row" fxLayoutGap="5px">
+        <mat-form-field appearance="standard" fxFlex="33">
+          <mat-label>New Password</mat-label>
+          <input matInput type="password" required formControlName="newp">
+        </mat-form-field><br>
+        <mat-form-field appearance="standard" fxFlex="33">
+          <mat-label>Confirm New Password</mat-label>
+          <input matInput type="password" required formControlName="cnewp">
+        </mat-form-field>
+      </div>
+      <div fxLayout="row" fxLayoutAlign="end"><button mat-flat-button class="sum" (click)="newUser()">Save</button></div>
+    </mat-card>
+
+
+    <mat-card class="mat-elevation-z24" *ngIf="selected === 2" [formGroup]="contact">
+      <mat-card-title fxLayout="row" fxLayoutAlign="center">CONTACT INFORMATION</mat-card-title>
+      <mat-divider></mat-divider>
+      <br>
+
+      <h2>Phone</h2>
+      <mat-form-field appearance="standard">
+        <mat-label>Phone</mat-label>
+        <input matInput type="tel" formControlName="phone">
+      </mat-form-field><br>
+
+      <h2>Mobile</h2>
+      <mat-form-field appearance="standard">
+        <mat-label>Mobile</mat-label>
+        <input matInput type="tel" formControlName="mobile">
+      </mat-form-field><br>
+
+      <h2>Address</h2>
+      <mat-form-field appearance="standard">
+        <mat-label>Address</mat-label>
+        <input matInput type="text" formControlName="address">
+      </mat-form-field><br>
+
+      <div fxLayout="row" fxLayoutAlign="end"><button mat-flat-button class="sum" (click)="newUser()">Save</button></div>
+    </mat-card>
+
+    <mat-card class="mat-elevation-z24" *ngIf="selected === 3" [formGroup]="additional">
+      <mat-card-title fxLayout="row" fxLayoutAlign="center">ADDITIONAL INFORMATION</mat-card-title>
+      <mat-divider></mat-divider>
+      <br>
+
+      <h2>Hobby</h2>
+      <mat-form-field appearance="standard">
+        <mat-label>Hobby</mat-label>
+        <input matInput formControlName="hobby">
+      </mat-form-field>
+
+      <h2>Movie</h2>
+      <mat-form-field appearance="standard">
+        <mat-label>Movie</mat-label>
+        <input matInput formControlName="movie">
+      </mat-form-field>
+
+      <h2>Series</h2>
+      <mat-form-field appearance="standard">
+        <mat-label>Series</mat-label>
+        <input matInput formControlName="series">
+      </mat-form-field>
+
+      <h2>Game</h2>
+      <mat-form-field appearance="standard">
+        <mat-label>Game</mat-label>
+        <input matInput formControlName="game">
+      </mat-form-field>
+
+      <div fxLayout="row" fxLayoutAlign="end"><button mat-flat-button class="sum" (click)="newUser()">Save</button></div>
+    </mat-card>
+  </div>
+
+</div>

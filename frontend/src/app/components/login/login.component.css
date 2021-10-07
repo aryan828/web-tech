@@ -1,0 +1,30 @@
+#main {
+  height: 100%;
+  width: 100%;
+}
+
+mat-card {
+  margin: 7% auto;
+  height: 60%;
+  width: 60%;
+  border-radius: 20px;
+}
+
+img {
+  height: 28%;
+}
+
+.but {
+  background-color: rgba(255,208,72,255);
+  width: 30%;
+  margin-left: 35%;
+}
+
+.login {
+  margin-top: 100px;
+}
+
+mat-form-field.mat-form-field {
+  width: 50%;
+  margin-left: 25%;
+}

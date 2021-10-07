@@ -1,0 +1,19 @@
+#main {
+  height: 100%;
+  width: 100%;
+  margin-left: 20%;
+  margin-top: 50px;
+}
+
+mat-card {
+  border-radius: 10px;
+}
+
+.sum {
+  color: white;
+  background-color: rgba(44,48,111,255);
+}
+
+mat-form-field.mat-form-field {
+  width: 50%;
+}

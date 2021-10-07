@@ -1,0 +1,23 @@
+<div id="main">
+  <mat-card class="mat-elevation-z24" [formGroup]="login" #loginFormDirective="ngForm">
+    <div fxLayout="row" fxFlexAlign="center center" fxLayoutGap="10px">
+      <div fxLayout="column" fxFlexAlign="space-evenly center" fxFlex="50" class="login">
+        <mat-card-title fxLayout="row" fxLayoutAlign="center">Login</mat-card-title>
+        <mat-form-field appearance="standard">
+          <mat-label>E-mail</mat-label>
+          <input matInput placeholder="abc@xyz.com" type="email" required formControlName="email">
+        </mat-form-field>
+        <mat-form-field appearance="standard">
+          <mat-label>Password</mat-label>
+          <input matInput type="password" required formControlName="password">
+        </mat-form-field>
+        <button mat-flat-button class="but" type="submit" (click)="getUser(login, loginFormDirective)">Submit</button>
+        <hr>
+        <a routerLink="/register"><button mat-flat-button class="but">Register</button></a>
+      </div>
+      <div fxFlex="50">
+        <img src="assets/login.jpg">
+      </div>
+    </div>
+  </mat-card>
+</div>
