@@ -4,7 +4,7 @@ import { User } from './user.model';
 import {HttpClient, HttpHeaders} from "@angular/common/http";
 import {BehaviorSubject, Observable} from "rxjs";
 
-const base = 'http://127.0.0.1:3000/user/';
+const base = 'http://13.127.87.93:3000/user/';
 
 @Injectable({
   providedIn: 'root'
