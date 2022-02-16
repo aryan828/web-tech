@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb+srv://dcc:dcc123@cluster0.gyxp7.mongodb.net/web-tech?retryWrites=true&w=majority/', error => {
+mongoose.connect('mongodb+srv://dcc:dcc123@cluster0.gyxp7.mongodb.net/web-tech', error => {
     if (!error)
         console.log('MongoDB connection successful.');
     else
